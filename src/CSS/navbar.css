@@ -1,0 +1,117 @@
+/* Default styles */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html{
+  font-size: 62.5%;
+
+}
+
+*{
+  margin: auto;
+  padding: auto;
+
+}
+
+
+body{
+  font-family: 'Bebas Neue', sans-serif;
+  overflow-x: hidden;
+ 
+}
+
+.navbar{
+  margin: 0;
+  display: flex;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+
+  z-index: 100;
+  
+}
+
+.navlogo{
+  margin: 0;
+  margin-right: auto;
+  width: 200px;
+
+}
+
+.nav-items{
+  margin : 0;
+  margin-top: 2rem;
+  display: inline;
+  
+}
+
+.nav-item{
+  display: inline;
+  margin: 0;
+  margin-right: 5rem;
+  font-size: 3rem;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-item a{
+  color: black;
+  text-decoration: none;
+}
+
+.nav-item:hover{
+  color: #e0701d;
+}
+
+.nav-item a:hover{
+  color: #e0701d;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .navlogo{
+  margin: auto;
+  }
+
+  .nav-items {
+    flex-direction: row;
+    margin: auto;
+    padding: 0rem 0px 0px 0px;
+  }
+
+  .nav-item {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .menu-toggle-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #000;
+    cursor: pointer;
+  }
+
+  .menu-toggle-btn::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 5px;
+    width: 20px;
+    height: 3px;
+    background: #fff;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  #menu-toggle:checked ~ .nav-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

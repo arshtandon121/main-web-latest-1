@@ -1,41 +1,136 @@
 .card-container {
-    margin-top: 4rem;
-    margin-bottom: 3rem;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: space-between;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+}
+.div1{
+  border: 2px solid red;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
+  grid-gap: 10px; /* Adds 10px gap between grid items */
+}
+
+.grid-item {
+  padding: 10px;
+}
+
+.card {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-top: 4rem;
+  width: 27rem;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 27px;
+  /* left: 50%; */
+  transform: rotate(268deg);
+  /* transform: translateX(-14%); */
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #000;
+}
+
+.card-header {
+  font-weight: bold;
+  font-size: 3rem;
+}
+.card.open {
+  margin-top: 10rem;
+}
+
+.card:hover {
+  background-color: #e0701d;
+  .arrow {
+    transition: opacity 0.3s ease;
+    bottom: 27px;
+    /* left: 50%; */
+   
+    transform: translateX(-14%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #000;
+}
+}
+
+.card-description
+ {
+   visibility: hidden;
+  text-align: start;
+  opacity: 0;
+  background-color: #fff;
+  padding: 10px;
+  position: absolute;
+  font-size: 2.2rem;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transition: opacity 0.3s ease; 
+}
+
+.card:hover .card-description {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card.open .card-description {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+.card-shifted {
+  margin-top: 10rem;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Creates two equal-width columns */
+    grid-gap: 10px; /* Adds 10px gap between grid items */
   }
   
-  .card {
-    justify-content: center;
-    background-color: #f2f2f2;
+  .grid-item {
     padding: 10px;
-    margin-bottom: 10rem;
-    margin-top: 4rem;
-    width: 100%;
-    cursor: pointer;
-    position: relative;
-    transition: background-color 0.3s ease;
   }
-  
+
+  .card {
+    margin-bottom: 2rem;
+  }
+
   .card-header {
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2rem;
   }
-  
-  .card:hover {
-    background-color: #e0701d;
-  }
-  
+
   .card-description {
-    display: none;
-    text-align: start;
-    opacity: 0;
-    background-color: #fff;
+   visibility: hidden;
     padding: 10px;
     position: absolute;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     top: 100%;
     left: 0;
     width: 100%;
@@ -43,20 +138,20 @@
     z-index: 1;
     transition: opacity 0.3s ease;
   }
-  
-  .card:hover .card-description {
-    display: block;
-    opacity: 1;
-  }
-  
-  @media (max-width: 768px) {
-    .card-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .card {
-      margin-bottom: 2rem;
-    }
-  }
-  
+}
+
+.image-container {
+  float: right;
+  margin-left: 20px;
+  width: 200px;
+}
+
+#hover-image {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover ~ .image-container #hover-image {
+  opacity: 0;
+}

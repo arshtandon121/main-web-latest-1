@@ -324,8 +324,12 @@ height: 5rem;
 .carousel-heading {
   font-size: 1.5rem;
 }
-
+.cr1{
+  width: 98vw;
+  overflow: hidden;
+}
 .carousel {
+  /* border: 2px solid  red; */
   display: flex;
   justify-content: center;
   align-items: center;

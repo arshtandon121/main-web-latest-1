@@ -45,10 +45,13 @@ export default function Home() {
             Digital Marketing Solutions.
           </p>
 
-         
+        
+
           <div className="contained-button">
+          
           <a href="#form-section">Get Started</a>
           </div>
+         
 
           <div className="home-image">
             <img className="h1" src={gif} />
@@ -90,9 +93,9 @@ export default function Home() {
             results with Dyota.
           </p>
           <div className="social">
-            <a href="https://twitter.com/DyotaDigital"><i class="fa fa-twitter"></i></a>
+             <a href="https://www.linkedin.com/company/dyotads/?trk=public_profile_topcard-current-company" ><i class="fa fa-linkedin"></i></a>
             <a href="https://www.instagram.com/dyotalive/"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/dyotads/?trk=public_profile_topcard-current-company" ><i class="fa fa-linkedin"></i></a>
+            <a href="https://twitter.com/DyotaDigital"><i class="fa fa-twitter"></i></a>
           </div>
         </div>
 
@@ -116,8 +119,8 @@ export default function Home() {
               name="phone"
               placeholder="Enter your phone number"
             />
-
-            <input className='formbutton'type="submit" value="Submit" />
+  <button className='formbutton 'type="submit" value="Submit" ><a className = 'cta-text'ehref="#form-section">Contact Us</a></button>
+            {/* <input className='formbutton'type="submit" value="Submit" /> */}
           </div>
         </div>
       </div>

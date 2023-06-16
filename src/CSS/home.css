@@ -62,6 +62,12 @@ body{
     left: -17%;
     width: 90%;
   }
+
+  .getstarted{
+    border: 2px solid red;
+    width: 50vw;
+    height: 20vh;
+  }
   
   .contained-button {
     display: flex;
@@ -1170,6 +1176,15 @@ height: 5rem;
   }
   
   .formbutton{
+    position: relative;
+    background-color: #e0701d;
+    
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
     margin-top: 2rem;
     font-size: 2rem;
     background-color: #e0701d;

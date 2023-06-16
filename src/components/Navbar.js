@@ -23,9 +23,10 @@ export default function Navbar() {
           <li className="nav-item" to="">
             <a href="#services-section">Services</a>
           </li>
-          <div className="nav-item nav-btn" to="">
-            <a style={{color : "#e0701d"}} ehref="#form-section">Contact Us</a>
-          </div>
+          <button className="footer-cta1"><a className = 'cta-text'ehref="#form-section">Contact Us</a></button>
+            {/* <div className="nav-item nav-btn" to="">
+              <a  ehref="#form-section">Contact Us</a>
+            </div> */}
         </ul>
       </div>
     </div>
